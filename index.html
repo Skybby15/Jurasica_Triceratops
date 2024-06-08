@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triceratops</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo-jurasica-500.png" alt="Dinosaur Icon">
+    <h1>Triceratops</h1>
+</header>
+<nav>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</nav>
+<main>
+    <div class="image-container">
+        <img src="triceratops_1.jpg" alt="triceratops 1 Icon" >
+        <img src="triceratops_2.jpg" alt="triceratops 2 Icon" >
+        <img src="trr3.jpg" alt="triceratops 3 Icon" >
+        <img src="triceratops_4.jpg" alt="triceratops 4 Icon" >
+    </div>
+    <h2>Română</h2>
+    <button class="button" id="play-romana">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="romana-text"> Triceratops, un gen numit de Othniel Charles Marsh în 1889, este unul dintre cei mai cunoscuți dinozauri din perioada Cretacicului târziu, în special din epoca Maastrichtiană.  Fosile au fost descoperite în regiuni din SUA (Colorado, Montana, Dakota de Sud, Wyoming) și Canada (Alberta, Saskatchewan).  Genul include două specii: Triceratops horridus (specia tip) și Triceratops prorsus.
+
+        Triceratops a aparținut clasei Reptilia, ordinul Dinosauria, subordinul Ornithischia, infraordinul Ceratopsia, familia Ceratopsidae, subfamilia Chasmosaurinae și tribul Triceratopsini.  Acești dinozauri erau ierbivori, cu o lungime estimată între 8 și 9 metri.
+
+        Aveau un aspect distinctiv caracterizat prin trei coarne faciale (două deasupra ochilor și unul pe nas), un volan osos mare la ceafă și un corp robust.  Rămășițele multiple, inclusiv schelete aproape complete, au oferit informații semnificative asupra structurii și stilului lor de viață.</p>
+
+    <h2>English</h2>
+    <button class="button" id="play-engleza">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="engleza-text">Triceratops, a genus named by Othniel Charles Marsh in 1889, is one of the most well-known dinosaurs from the Late Cretaceous period, specifically the Maastrichtian age. Fossils have been discovered in regions of the USA (Colorado, Montana, South Dakota, Wyoming) and Canada (Alberta, Saskatchewan). The genus includes two species: Triceratops horridus (the type species) and Triceratops prorsus.
+
+        Triceratops belonged to the class Reptilia, order Dinosauria, suborder Ornithischia, infraorder Ceratopsia, family Ceratopsidae, subfamily Chasmosaurinae, and tribe Triceratopsini. These dinosaurs were herbivores, with an estimated length between 8 and 9 meters.
+
+        They had a distinctive appearance characterized by three facial horns (two above the eyes and one on the nose), a large bony frill at the back of their head, and a robust body. Multiple remains, including nearly complete skeletons, have provided significant insights into their structure and lifestyle.</p><br>
+
+
+</main>
+<footer>
+    <script>
+        const romanaAudio = new Audio('triceratops_voce_romana.mp3');
+        const englezaAudio = new Audio('triceratops_voce_engleza.mp3');
+
+        const playRomana = document.getElementById('play-romana');
+        const romanaText = document.getElementById('romana-text');
+        const playEngleza = document.getElementById('play-engleza');
+        const englezaText = document.getElementById('engleza-text');
+
+        playRomana.addEventListener('click', () => {
+            if (romanaAudio.paused) {
+                romanaAudio.play();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                romanaAudio.pause();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+
+        playEngleza.addEventListener('click', () => {
+            if (englezaAudio.paused) {
+                englezaAudio.play();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                englezaAudio.pause();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+    </script>
+    &copy; 2024 Jurasica Adventure Park. All rights reserved.
+</footer>
+
+</body>
+</html>
